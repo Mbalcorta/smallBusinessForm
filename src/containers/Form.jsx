@@ -76,6 +76,7 @@ class Form extends Component {
           <input type="text" className="form-input" name="street" placeholder="Street Address" />
           <input type="text" className="form-input" name="zip" placeholder="Your Zipcode" />
         </div>
+<<<<<<< HEAD
         <div style={{display: this.state.isBusiness ? 'block' : 'none'}}>
           <div className="flex">
             <input type="text" className="form-input" name="company_name" placeholder="Business Name*" />
@@ -94,6 +95,16 @@ class Form extends Component {
           </label>
         </div>
         <div className="flex" style={{marginTop: '25px'}}>
+=======
+        <div>
+          <input id='veteran' name="veteran_checkbox" style={{padding:'0', margin:'0',verticalAlign:'bottom', position: 'relative', width: '20px', height: '20px', borderRadius: '5px', border: '2px solid #555'}} type="checkbox"/>
+          <label style={{display:'inline', textIndent:'-15px'}}>
+            <strong>Check this box if you are a veteran and want to help save net neutrality.
+            </strong>
+          </label>
+        </div>
+        <div className="flex">
+>>>>>>> Updating form to include veteran checkbox.
           <button className="btn">
             <span>{this.props.formButton}</span>
           </button>
@@ -256,6 +267,7 @@ class Form extends Component {
       secondRow[1].value = ''
     }
 
+<<<<<<< HEAD
     clearBusinessForm(){
       const formFlex = document.getElementById("form").getElementsByClassName("flex")
       const thirdRow = formFlex[2].getElementsByClassName("form-input")
@@ -267,6 +279,8 @@ class Form extends Component {
       document.getElementById("business").checked = false
     }
 
+=======
+>>>>>>> Updating form to include veteran checkbox.
     sendFormToActionKit(fields) {
         // iFrame
         const iframe = document.createElement('iframe');
@@ -290,15 +304,24 @@ class Form extends Component {
             form.appendChild(input);
         });
 
-        form.submit()
+        // form.submit()
         this.setState(
           { submitted: true }, 
           () => {
             this.clearUserForm()
+<<<<<<< HEAD
             if(document.getElementById("business").checked){
               this.clearBusinessForm()
             }
            });   
+=======
+            if(document.getElementById("veteran").checked){
+              document.getElementById("veteran").checked = false
+            }
+        });
+        
+        
+>>>>>>> Updating form to include veteran checkbox.
     }
 
 }
