@@ -183,9 +183,9 @@ class Form extends Component {
         };
 
         if(document.getElementById("veteran").checked){
-          fields['action_veteran'] = 1
+          fields['action_veteran'] = CONF.actionKitPageId
         }
-      
+
         this.sendFormToActionKit(fields);
     }
 
